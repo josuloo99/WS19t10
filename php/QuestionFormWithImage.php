@@ -12,7 +12,7 @@
   <?php include '../php/Menus.php' ?>
   <section class="main" id="s1">
     <div>
-  <form action="AddQuestionWithImage.php" onsubmit="return egiaztatu()" method="get" id="galderenF" name="galderenF">
+  <form action="AddQuestionWithImage.php" onsubmit="return egiaztatu()" method="post" id="galderenF" name="galderenF">
   <label>E-posta:</label>
   <input type="text" name="eposta" id="eposta">
   <br><br>

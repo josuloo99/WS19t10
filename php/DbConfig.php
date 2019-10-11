@@ -8,8 +8,8 @@ if ($lokal){
 }
 else{
     $zerbitzaria="localhost";
-    $erabiltzailea="";
-    $gakoa="";
-    $db="";
+    $erabiltzailea="id11167645_root";
+    $gakoa="12345";
+    $db="id11167645_quiz";
 }
 ?>
