@@ -6,12 +6,6 @@
 <body>
   <?php include '../php/Menus.php' ?>
   <section class="main" id="s1">
-    <div>
-  
-    Irudirik gabeko galdera baten datuak erabiltzaileak sar ditzan <br/>
-      beharrezkoa den formularioa eta scriptak (gidoia/k) gehitu
-    
-    </div>
   <form onsubmit="return ../js/ValidateFieldsQuestion.js" action="AddQuestion.php" method="get">
   <p>E-posta:</p>
   <input type="text" name="eposta" required>

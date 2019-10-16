@@ -16,25 +16,30 @@
         if(mysqli_num_rows($er) > 0){
           echo "<table>"; 
           echo "<tr>"; 
-          echo "<th>E-maila</th>"; 
+      //    echo "<th>E-maila</th>"; 
           echo "<th>Galdera</th>"; 
           echo "<th>Erantzun zuzena</th>"; 
           echo "<th>Erantzun okerra 1</th>"; 
           echo "<th>Erantzun okerra 2</th>"; 
           echo "<th>Erantzun okerra 3</th>"; 
+		      echo "<th>Zailtasuna</th>"; 
           echo "<th>Gai arloa</th>";
+		      echo "<th>Irudia</th>";
           echo "</tr>";
 
-          while($ilara = mysqli_fetch_array($er)){
+          while($ilara= mysqli_fetch_array($er, MYSQLI_ASSOC)){
             echo "<tr>"; 
-            echo "<th>".$ilara['eposta']."</th>";
-            echo "<th>".$ilara['galdera']."</th>";
-            echo "<th>".$ilara['erantzunZuzena']."</th>";
-            echo "<th>".$ilara['erantzunOkerra1']."</th>";
-            echo "<th>".$ilara['erantzunOkerra2']."</th>";
-            echo "<th>".$ilara['erantzunOkerra3']."</th>";
-            echo "<th>".$ilara['zailtasuna']."</th>";
-            echo "<th>".$ilara['gaiarloa']."</th>";
+           // echo "<th>".$ilara['eposta']."</th>";
+            echo "<td>".$ilara['galdera']."</td>";
+            echo "<td>".$ilara['erantzunZuzena']."</td>";
+            echo "<td>".$ilara['erantzunOkerra1']."</td>";
+            echo "<td>".$ilara['erantzunOkerra2']."</td>";
+            echo "<td>".$ilara['erantzunOkerra3']."</td>";
+            echo "<td>".$ilara['zailtasuna']."</td>";
+            echo "<td>".$ilara['gaiarloa']."</td>";
+			      if($ilara['irudia'] != null) {
+      				echo '<td><img style="height:200px;max-widtd:200" src="data:irudia/jpeg;base64,'.base64_encode( $ilara['irudia'] ).'"/></td>';
+      			}
           }
           echo "</table>";
           mysqli_free_result($er);
@@ -49,6 +54,7 @@
       mysqli_close($esteka);
     ?>
   </section>
+ 
   <?php include '../html/Footer.html' ?>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="eu">
 <head>
  
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="../js/jquery-3.4.1.min.js"></script>
   <?php include '../html/Head.html'?>
   <style>
   form .error {
@@ -13,12 +13,7 @@
 <body>
   <?php include '../php/Menus.php' ?>
   <section class="main" id="s1">
-    <div>
-  
-    Irudirik gabeko galdera baten datuak erabiltzaileak sar ditzan <br/>
-      beharrezkoa den formularioa eta scriptak (gidoia/k) gehitu
-    
-    </div>
+
   <form action="AddQuestionWithImage.php" method="get" id="galderenF" name="galderenF">
   <label>E-posta:</label>
   <input type="email" name="eposta" id="eposta" pattern="([a-z]+[0-9]{3}@ikasle\.ehu\.((eus)|(es)))|([a-z]+\.?[a-z]*@ehu\.((eus)|(es)))" required>

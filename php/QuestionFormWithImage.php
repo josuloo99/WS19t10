@@ -3,7 +3,7 @@
 <head>
   <script src="../js/ValidateFieldsQuestion.js"></script>
   <script src="../js/ShowImageInForm.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="../js/jquery-3.4.1.min.js"></script>
   <link rel="stylesheet" href="styles.css">
   <?php include '../html/Head.html'?>
   
@@ -12,7 +12,7 @@
   <?php include '../php/Menus.php' ?>
   <section class="main" id="s1">
     <div>
-  <form action="AddQuestionWithImage.php" onsubmit="return egiaztatu()" method="post" id="galderenF" name="galderenF">
+  <form action="AddQuestionWithImage.php" onsubmit="return egiaztatu()" method="post" enctype = "multipart/form-data" id="galderenF" name="galderenF">
   <label>E-posta:</label>
   <input type="text" name="eposta" id="eposta">
   <br><br>
@@ -42,6 +42,7 @@
   <label>Irudia</label>
   <input type="file" name="irudia" id="irudia" accept="image/*" onchange="preview_image(event)">
   <br>
+  <p id="irudierror" span class="error"></p>
   <img id="output_image"/>
   <br><br>
   <input type="submit" value="Bidali">
@@ -51,6 +52,7 @@
     
     </div>
    </section>
+   
   <?php include '../html/Footer.html' ?>
 
 </body>

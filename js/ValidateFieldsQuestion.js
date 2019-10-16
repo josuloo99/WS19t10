@@ -5,7 +5,10 @@
 	  var erantzunOkerra1=$("[name='erantzunOkerra1']").val();
 	  var erantzunOkerra2=$("[name='erantzunOkerra2']").val(); 
 	  var erantzunOkerra3=$("[name='erantzunOkerra3']").val(); 
-	  var gaiArloa=$("[name='gaiarloa']").val(); 
+	  var gaiArloa=$("[name='gaiarloa']").val();
+	  var irudia = $('#irudia')[0].files[0];
+	  var totalSize = (irudia.size / Math.pow(1024,2));
+	  
 	  //var zailtasuna=$("input[name='zailtasuna']:checked").val();
 	  
 	  $(".error").remove();
@@ -14,6 +17,10 @@
       var REemail2 = /^[a-z]+\.?[a-z]*@ehu\.[(eus)|(es)]/;
 	  var ondoDago = true;
 
+	  if(totalSize>1) {
+          $("[name='irudia']").after('<br><span class="error">Irudiak ezin du 1MB baino handiagoa izan</span>');
+		  ondoDago = false;
+      }
       if(!(REemail.test(email) | REemail2.test(email))){
 		  $("[name='eposta']").after('<span class="error">Emaila ez dago ondo.</span>');
 		  ondoDago = false;
@@ -42,9 +49,7 @@
           $("[name='gaiarloa']").after('<span class="error">Idatzi gai arlo bat.</span>');
 		  ondoDago = false;
       }
-
-	  return ondoDago;
-     
-	 
-    }
+       return ondoDago;
+  
+}
 	

@@ -1,26 +1,67 @@
 @charset "utf-8";
-* 						{margin: 0; padding: 0;}
-body						{font: 16px Georgia, serif;}
-
-#page-wrap				{margin: 2% auto; color: white;}
-#page-wrap >.main 		{border: 1px solid #999; padding: 1%;
-						 margin-bottom: 1px; color: black;}
-
-section > div				{padding: 5px;}
-header, nav, section		{background: #eee; text-align: center;}
-footer					{background: #eee; text-align: center;}
-nav span             				{ margin: 0px 10px 0px 0px;
-						width: 100%;
-						display: inline-block;}
-
-#ErrorMsgs   { color: #f61; 
-font-size: smaler}
-
-  form .error {
-  color: #ff0000;
-  font-size: smaller;
-  }
-  #output_image{
-	max-width:200px;
-	max-height:100px;
-  }
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font: 16px Georgia, serif;
+}
+#s1 {
+	position: relative;
+}
+#page-wrap {
+    margin: 2% auto;
+    color: white;
+}
+#page-wrap>.main {
+    border: 1px solid #999;
+    padding: 1%;
+    margin-bottom: 1px;
+    color: black;
+}
+section>div {
+    padding: 5px;
+}
+header, nav, section {
+    background: #eee;
+    text-align: center;
+}
+footer {
+    background: #eee;
+    text-align: left;
+    position: fixed;
+    bottom: 0;
+    width: 200px;
+}
+nav span {
+    margin: 0px 10px 0px 0px;
+    width: 100%;
+    display: inline-block;
+}
+#ErrorMsgs {
+    color: #f61;
+    font-size: smaler
+}
+form .error {
+    color: #ff0000;
+    font-size: smaller;
+}
+#output_image {
+    max-width: 200px;
+    max-height: 100px;
+}
+table, td, th {
+    border: 1px solid #ddd;
+    text-align: left;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    padding: 15px;
+    text-align: center;
+}
+td {
+    font-weight: normal;
+}

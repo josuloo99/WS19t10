@@ -19,19 +19,29 @@
   	$erantzunOkerra3 = $_POST['erantzunOkerra3'];
   	$zailtasuna = $_POST['zailtasuna'];
   	$gaiarloa = $_POST['gaiarloa'];
-
-  	$sql = "INSERT INTO questions (eposta, galdera, erantzunZuzena, erantzunOkerra1, erantzunOkerra2, erantzunOkerra3, zailtasuna, gaiarloa) VALUES ('$eposta', '$galdera', '$erantzunZuzena', '$erantzunOkerra1', '$erantzunOkerra2', '$erantzunOkerra3', '$zailtasuna', '$gaiarloa')";
-
+	  if (!empty($_FILES['irudia']['name']) && !empty($_FILES['irudia']['tmp_name'])){
+  		#echo 'ezzzz';
+  		$irudia = $_FILES['irudia']['tmp_name'];
+  		$izena = $_FILES['irudia']['name'];
+  		$irudia = addslashes(file_get_contents($_FILES['irudia']['tmp_name']));
+  		
+  		$sql = "INSERT INTO questions VALUES ('$eposta', '$galdera', '$erantzunZuzena', '$erantzunOkerra1', '$erantzunOkerra2', '$erantzunOkerra3', '$zailtasuna', '$gaiarloa', '$irudia')";
+  	}
+  	else {
+  		$sql = "INSERT INTO questions (eposta, galdera, erantzunZuzena, erantzunOkerra1, erantzunOkerra2, erantzunOkerra3, zailtasuna, gaiarloa) VALUES ('$eposta', '$galdera', '$erantzunZuzena', '$erantzunOkerra1', '$erantzunOkerra2', '$erantzunOkerra3', '$zailtasuna', '$gaiarloa')";
+  	}
+	
   	if (mysqli_query($esteka, $sql)) {
   		echo "Oso ondo! Ikusi gordeta dauden galderak";
   		echo("<br><br>");
-  		echo("<button onclick=\"location.href='ShowQuestions.php'\"> Ikusi galderak </button>");
+  		echo("<button onclick=\"location.href='ShowQuestionsWithImage.php'\"> Ikusi galderak </button>");
   	}
   	else{
-  		echo "Arazo bat egon da, saiatu berriro, mesedez.";
+  		echo("Error description: " . mysqli_error($esteka));
   		echo("<br><br>");
   		echo("<button onclick=\"location.href='QuestionFormWithImage.php'\"> Saiatu berriro </button>");
   	}
+
 
   	mysqli_close($esteka);
   	?>	

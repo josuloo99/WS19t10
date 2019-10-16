@@ -9,4 +9,6 @@
   <span><a href='Layout.php'>Hasiera</a></span>
   <span><a href='QuestionFormWithImage.php'>Galderak sortu</a></span>
   <span><a href='Credits.php'>Kredituak</a></span>
+  <span><a href='ShowQuestionsWithImage.php'>Erakutsi galderak</a></span>
 </nav>
+
