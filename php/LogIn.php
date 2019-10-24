@@ -24,7 +24,8 @@
 
     <?php
 		if(isset($_POST['submit'])){ 
-      $esteka = mysqli_connect($zerbitzaria, $erabiltzailea, $gakoa, $db) 
+			print($erabiltzailea);
+      		$esteka = mysqli_connect($zerbitzaria, $erabiltzailea, $gakoa, $db) 
         or die ("Errorea Dbra konektatzerakoan");
 		
       $eposta = $_POST['eposta'];
@@ -43,7 +44,9 @@
 		$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
 		if($row['eposta']==$eposta && password_verify($pasahitza, $row["pasahitza"])) {
-			header("location: Layout.php?usr=".$eposta."");			
+			echo ("<script>
+			    window.location.assign('Layout.php?usr=".$eposta."');
+			</script>");		
 		}
 		else {
 			echo"Sorry, your credentials are not valid, Please try again.";

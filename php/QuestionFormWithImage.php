@@ -13,11 +13,11 @@
   <section class="main" id="s1">
     <div>
 	<?php if(isset($_GET['usr'])){
-	$erabiltzailea = $_GET['usr'];
+	$user = $_GET['usr'];
 	}?>
-  <form action="AddQuestionWithImage.php" method="post" enctype = "multipart/form-data" id="galderenF" name="galderenF">
+  <form action="AddQuestionWithImage.php?usr=<?php echo $user ?>" method="post" enctype = "multipart/form-data" id="galderenF" name="galderenF">
   <label>E-posta:</label>
-  <input type="text" name="eposta" id="eposta" value="<?php echo htmlspecialchars($erabiltzailea); ?>"  disabled="disabled">
+  <input type="text" name="eposta" id="eposta" value="<?php echo htmlspecialchars($user); ?>"  readonly="true">
   <br><br>
   <label>Galdera:</label>
   <input type="text" name="galdera">

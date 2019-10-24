@@ -59,7 +59,7 @@
     	if (mysqli_query($esteka, $sql)) {
     		echo "Oso ondo! Ikusi gordeta dauden galderak";
     		echo("<br><br>");
-    		echo("<button onclick=\"location.href='ShowQuestionsWithImage.php'\"> Ikusi galderak </button>");
+    		echo("<button onclick=\"location.href='ShowQuestionsWithImage.php?usr=$user'\"> Ikusi galderak </button>");
     	}
     	else{
     		echo("Error description: " . mysqli_error($esteka));

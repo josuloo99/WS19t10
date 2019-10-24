@@ -3,11 +3,11 @@
 <?php include 'DbConfig.php' ?>
 <?php
 if(isset($_GET['usr'])){
-	$erabiltzailea = $_GET['usr'];
-	echo $erabiltzailea;
+	$user = $_GET['usr'];
+	echo $user;
 	$esteka = mysqli_connect($zerbitzaria, $erabiltzailea, $gakoa, $db) 
 	or die ("Errorea Dbra konektatzerakoan");
-	$sql ="SELECT argazkia FROM users WHERE eposta='$erabiltzailea'";
+	$sql ="SELECT argazkia FROM users WHERE eposta='$user'";
 
 	$profileimage = mysqli_query($esteka, $sql);
 
@@ -19,7 +19,7 @@ if(isset($_GET['usr'])){
 		echo '<img style="height:50px;max-widtd:50" src="../images/user.png"/>';
 	}
 	echo "
-			<span class='right'><a href='Layout.php' onClick='return logout();'>Logout</a></span>
+			<span class='right'><a href='LogOut.php?usr=$user'>Logout</a></span>
 			";
 	
 	
@@ -42,10 +42,10 @@ else {
 if(isset($_GET['usr'])){
 	$erabiltzailea = $_GET['usr'];
 	echo "<html>
-		<span><a href='Layout.php?usr=$erabiltzailea'>Hasiera</a></span>
-		<span><a href='QuestionFormWithImage.php?usr=$erabiltzailea'>Galderak sortu</a></span>
-		<span><a href='ShowQuestionsWithImage.php?usr=$erabiltzailea'>Erakutsi galderak</a></span>
-		<span><a href='Credits.php?usr=$erabiltzailea'>Kredituak</a></span>
+		<span><a href='Layout.php?usr=$user'>Hasiera</a></span>
+		<span><a href='QuestionFormWithImage.php?usr=$user'>Galderak sortu</a></span>
+		<span><a href='ShowQuestionsWithImage.php?usr=$user'>Erakutsi galderak</a></span>
+		<span><a href='Credits.php?usr=$user'>Kredituak</a></span>
 		</html>";
 }
 else {
@@ -54,13 +54,6 @@ else {
 			<span><a href='Credits.php'>Kredituak</a></span>";
 }
 ?>
-<script type="text/javascript">
-    function logout(event){
-        alert("Agur! Beste bat arte!");
-        return true;
-    }
-</script>
-
 
 
 </nav>
