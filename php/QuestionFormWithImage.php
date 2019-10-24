@@ -12,9 +12,12 @@
   <?php include '../php/Menus.php' ?>
   <section class="main" id="s1">
     <div>
-  <form action="AddQuestionWithImage.php" onsubmit="return egiaztatu()" method="post" enctype = "multipart/form-data" id="galderenF" name="galderenF">
+	<?php if(isset($_GET['usr'])){
+	$erabiltzailea = $_GET['usr'];
+	}?>
+  <form action="AddQuestionWithImage.php" method="post" enctype = "multipart/form-data" id="galderenF" name="galderenF">
   <label>E-posta:</label>
-  <input type="text" name="eposta" id="eposta">
+  <input type="text" name="eposta" id="eposta" value="<?php echo htmlspecialchars($erabiltzailea); ?>"  disabled="disabled">
   <br><br>
   <label>Galdera:</label>
   <input type="text" name="galdera">
@@ -45,7 +48,7 @@
   <p id="irudierror" span class="error"></p>
   <img id="output_image"/>
   <br><br>
-  <input type="submit" value="Bidali">
+  <input type="submit" name="submit" value="Bidali">
   </form>
  
    

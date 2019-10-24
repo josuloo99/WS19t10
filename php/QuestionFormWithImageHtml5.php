@@ -17,6 +17,7 @@
   <form action="AddQuestionWithImage.php" method="get" id="galderenF" name="galderenF">
   <label>E-posta:</label>
   <input type="email" name="eposta" id="eposta" pattern="([a-z]+[0-9]{3}@ikasle\.ehu\.((eus)|(es)))|([a-z]+\.?[a-z]*@ehu\.((eus)|(es)))" required>
+  
   <br><br>
   <label>Galdera:</label>
   <input type="text" name="galdera" pattern=".{10,}"required>

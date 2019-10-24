@@ -8,6 +8,7 @@
   <section class="main" id="s1">
    <?php include 'DbConfig.php' ?>
     <?php
+	if(isset($_GET['usr'])){
     $esteka = mysqli_connect($zerbitzaria, $erabiltzailea, $gakoa, $db) 
       or die ("Errorea Dbra konektatzerakoan");
 
@@ -44,6 +45,10 @@
         echo "Arazoak egon dira, ezin izan da taula lortu.";
       }
       mysqli_close($esteka);
+	}
+	else {
+		echo "Kautotuta egon behar zara galderak ikusteko.";
+	}
     ?>
   </section>
  
