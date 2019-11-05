@@ -6,6 +6,7 @@
 <body>
   <?php include '../php/Menus.php' ?>
   <section class="main" id="s1">
+  <div id="taula">
    <?php include 'DbConfig.php' ?>
     <?php
 	if(isset($_GET['usr'])){
@@ -50,6 +51,7 @@
 		echo "Kautotuta egon behar zara galderak ikusteko.";
 	}
     ?>
+    </div>
   </section>
  
   <?php include '../html/Footer.html' ?>

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<assessmentitems>
+    <assessmentitem author="rosa.arruabarrena@ehu.eus" subject="Mikologia">
+        <itembody>
+            <p>
+                Zein Amanita da jangarria?
+            </p>
+        </itembody>
+        <correctresponse>
+            <value>
+                Caesarea
+            </value>
+        </correctresponse>
+        <incorrectresponses>
+            <value>
+                Phalloides
+            </value>
+            <value>
+                Muscaria
+            </value>
+            <value>
+                Virosa
+            </value>
+        </incorrectresponses>
+    </assessmentitem>
+    <assessmentitem author="vadillo@ehu.es" subject="Mikologia">
+        <itembody>
+            <p>
+                Tripakiek zer dute kapela azpian?
+            </p>
+        </itembody>
+        <correctresponse>
+            <value>
+                Eztenak
+            </value>
+        </correctresponse>
+        <incorrectresponses>
+            <value>
+                Filamenduak
+            </value>
+            <value>
+                Himenioa
+            </value>
+            <value>
+                Hodiak
+            </value>
+        </incorrectresponses>
+    </assessmentitem>
+    <assessmentitem author="mafalda001@ikasle.ehu.eus" subject="Mikologia">
+        <itembody>
+            <p>
+                Eranztuna du
+            </p>
+        </itembody>
+        <correctresponse>
+            <value>
+                Galanpernak
+            </value>
+        </correctresponse>
+        <incorrectresponses>
+            <value>
+                Gibel urdinak
+            </value>
+            <value>
+                Esnegorriak
+            </value>
+            <value>
+                Errotariak
+            </value>
+        </incorrectresponses>
+    </assessmentitem>
+    <assessmentitem author="def123@ikasle.ehu.eus" subject="Geografia">
+        <itembody>
+            <p>
+                Zein da Frantziako hiriburua?
+            </p>
+        </itembody>
+        <correctresponse>
+            <value>
+                Paris
+            </value>
+        </correctresponse>
+        <incorrectresponses>
+            <value>
+                Tolousse
+            </value>
+            <value>
+                Le Tour
+            </value>
+            <value>
+                Arcachon
+            </value>
+        </incorrectresponses>
+    </assessmentitem>
+    <assessmentitem author="def123@ikasle.ehu.eus" subject="Rupertxo">
+        <itembody>
+            <p>
+                Ez
+            </p>
+        </itembody>
+        <correctresponse>
+            <value>
+                da
+            </value>
+        </correctresponse>
+        <incorrectresponses>
+            <value>
+                posible
+            </value>
+            <value>
+                ezin
+            </value>
+            <value>
+                liteke
+            </value>
+        </incorrectresponses>
+    </assessmentitem>
+    <assessmentitem author="def123@ikasle.ehu.eus" subject="Geografia">
+        <itembody>
+            <p>
+                Zein da Frantziako hiriburua?
+            </p>
+        </itembody>
+        <correctresponse>
+            <value>
+                Paris
+            </value>
+        </correctresponse>
+        <incorrectresponses>
+            <value>
+                Tolousse
+            </value>
+            <value>
+                Le Tour
+            </value>
+            <value>
+                Arcachon
+            </value>
+        </incorrectresponses>
+    </assessmentitem>
+    <assessmentitem author="def123@ikasle.ehu.eus" subject="Mikologia">
+        <itembody>
+            <p>
+                Zein da perretxiko hau?
+            </p>
+        </itembody>
+        <correctresponse>
+            <value>
+                Kuleto faltsua
+            </value>
+        </correctresponse>
+        <incorrectresponses>
+            <value>
+                Onddoa
+            </value>
+            <value>
+                Zaputza
+            </value>
+            <value>
+                Txanpinoia
+            </value>
+        </incorrectresponses>
+    </assessmentitem>
+    <assessmentitem author="def123@ikasle.ehu.eus" subject="Geografia">
+        <itembody>
+            <p>
+                Zenbat biztanle ditu Usurbilek?
+            </p>
+        </itembody>
+        <correctresponse>
+            <value>
+                5.000-10.000
+            </value>
+        </correctresponse>
+        <incorrectresponses>
+            <value>
+                1.000-5.000
+            </value>
+            <value>
+                10.000-30.000
+            </value>
+            <value>
+                100-1.000
+            </value>
+        </incorrectresponses>
+    </assessmentitem>
+    <assessmentitem author="def123@ikasle.ehu.eus" subject="Pertsonaiak">
+        <itembody>
+            <p>
+                Nor da argazkiko pertsonaia?
+            </p>
+        </itembody>
+        <correctresponse>
+            <value>
+                Mikel Pagadi
+            </value>
+        </correctresponse>
+        <incorrectresponses>
+            <value>
+                Zuhaitz Gurrutxaga
+            </value>
+            <value>
+                Angel Alkain
+            </value>
+            <value>
+                David Broncano
+            </value>
+        </incorrectresponses>
+    </assessmentitem>
+    <assessmentitem author="def123@ikasle.ehu.eus" subject="Bitxikeriak">
+        <itembody>
+            <p>
+                Zenbat irauten du REM faseak lo gaudenean?
+            </p>
+        </itembody>
+        <correctresponse>
+            <value>
+                90 minutu
+            </value>
+        </correctresponse>
+        <incorrectresponses>
+            <value>
+                60 minutu
+            </value>
+            <value>
+                120 minutu
+            </value>
+            <value>
+                480 minutu
+            </value>
+        </incorrectresponses>
+    </assessmentitem>
+    <assessmentitem author="def123@ikasle.ehu.eus" subject="Pertsonaiak">
+        <itembody>
+            <p>
+                Nongoa da Jon Basaguren?
+            </p>
+        </itembody>
+        <correctresponse>
+            <value>
+                Gasteiz
+            </value>
+        </correctresponse>
+        <incorrectresponses>
+            <value>
+                Aramaio
+            </value>
+            <value>
+                Amurrio
+            </value>
+            <value>
+                Gamiz
+            </value>
+        </incorrectresponses>
+    </assessmentitem>
+    <assessmentitem author="eee123@ikasle.ehu.eus" subject="Banderak">
+        <itembody>
+            <p>
+                Zein kolore EZ du Errusiako banderak?
+            </p>
+        </itembody>
+        <correctresponse>
+            <value>
+                Grisa
+            </value>
+        </correctresponse>
+        <incorrectresponses>
+            <value>
+                Zuria
+            </value>
+            <value>
+                Urdina
+            </value>
+            <value>
+                Gorria
+            </value>
+        </incorrectresponses>
+    </assessmentitem>
+</assessmentitems>

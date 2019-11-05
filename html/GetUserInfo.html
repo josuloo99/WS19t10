@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="../js/GetUserInfo.js"></script>
+	<style type="text/css">
+		body{
+			text-align: center;
+		}
+		table{
+			text-align: center;
+			table-layout: auto;
+		}
+		td, th {
+  			border: 1px solid #dddddd;
+  			text-align: left;
+  			padding: 8px;
+		}
+		tr:nth-child(even) {
+		  background-color: #dddddd;
+		}
+	</style>
+</head>
+<body>
+
+<h2>XML fitxategi batetik lortutako erabiltzaile zerrenda</h2>
+
+<h4>Aukeratu eposta eta erabiltzailearen informazioa agertuko zaizu</h4>
+
+<select id="lista" onchange="erakutsiInfo()"></select> <br><br>
+
+<table id="taula" hidden="true" align="center">
+  <tr>
+    <th>Eposta</th>
+    <th>Izena</th>
+    <th>1. abizena</th>
+    <th>2. abizena</th>
+    <th>Telefono zenbakia</th>
+  </tr>
+  <tr>
+    <td><label class="emaitza" id="eposta" readonly="true" hidden="true"></label></td>
+    <td><label class="emaitza" id="izena" readonly="true" hidden="true"></label></td>
+    <td><label class="emaitza" id="abizena" readonly="true" hidden="true"></label></td>
+    <td><label class="emaitza" id="abizena2" readonly="true" hidden="true"></label></td>
+    <td><label class="emaitza" id="tel" readonly="true" hidden="true"></label></td>
+  </tr>
+</table>
+
+
+</body>
+</html>

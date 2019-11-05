@@ -23,8 +23,7 @@
   </form>
 
     <?php
-		if(isset($_POST['submit'])){ 
-			print($erabiltzailea);
+		if(isset($_POST['submit'])){
       		$esteka = mysqli_connect($zerbitzaria, $erabiltzailea, $gakoa, $db) 
         or die ("Errorea Dbra konektatzerakoan");
 		
@@ -45,11 +44,14 @@
 
 		if($row['eposta']==$eposta && password_verify($pasahitza, $row["pasahitza"])) {
 			echo ("<script>
+          alert('Ongi etorri!');
 			    window.location.assign('Layout.php?usr=".$eposta."');
 			</script>");		
 		}
 		else {
-			echo"Sorry, your credentials are not valid, Please try again.";
+			echo "<script>
+            alert('Sartutako datuak ez dira egokiak');
+            </script>";
 		}
 
       mysqli_close($esteka);
