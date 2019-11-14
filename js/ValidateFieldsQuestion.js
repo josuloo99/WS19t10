@@ -17,10 +17,10 @@
       var REemail2 = /^[a-z]+\.?[a-z]*@ehu\.[(eus)|(es)]/;
 	  var ondoDago = true;
 
-	  if(totalSize>1) {
+	  /*if(totalSize>1) {
           $("[name='irudia']").after('<br><span class="error">Irudiak ezin du 1MB baino handiagoa izan</span>');
 		  ondoDago = false;
-      }
+      }*/
       if(!(REemail.test(email) | REemail2.test(email))){
 		  $("[name='eposta']").after('<span class="error">Emaila ez dago ondo.</span>');
 		  ondoDago = false;

@@ -4,6 +4,8 @@
   <script src="../js/ValidateFieldsQuestion.js"></script>
   <script src="../js/ShowImageInForm.js"></script>
   <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/AddQuestionsAjax.js"></script>
+  <script src="../js/ShowQuestionsAjax.js"></script>
   <link rel="stylesheet" href="styles.css">
   <?php include '../html/Head.html'?>
   
@@ -11,13 +13,16 @@
 <body>
   <?php include '../php/Menus.php' ?>
   <section class="main" id="s1">
-    <div>
-	<?php if(isset($_GET['usr'])){
-	$user = $_GET['usr'];
-	}?>
-  <form action="AddQuestionWithImage.php?usr=<?php echo $user ?>" method="post" enctype = "multipart/form-data" id="galderenF" name="galderenF" onSubmit="return egiaztatu()">
+  <div id="taula">
+  <?php if(isset($_GET['usr'])){
+    $user = $_GET['usr'];
+  }?>
+  <p id="galderaKont"></p><br>
+  <div>
+  <form action="AddQuestionWithImage.php?usr=<?php echo $user ?>" method="post" enctype = "multipart/form-data" id="galderenF" name="galderenF">
   <label>E-posta:</label>
   <input type="text" name="eposta" id="eposta" value="<?php echo htmlspecialchars($user); ?>"  readonly="true">
+  <!--<input type="text" name="eposta" id="eposta">-->
   <br><br>
   <label>Galdera:</label>
   <input type="text" name="galdera">
@@ -48,16 +53,23 @@
   <p id="irudierror" span class="error"></p>
   <img id="output_image"/>
   <br><br>
-  <input type="submit" name="submit" value="Bidali">
+  <input type="button" value="Bidali" onclick="galderaGehitu(galderenF)"/>
+  <input type="button" value="Galderak ikusi" onclick="galderakEskatu()"/>
+  <input type="button" value="Galderak ezkutatu" onclick="galderakEzkutatu()"/>
   </form>
- 
-   
-    
-    </div>
+  </div>
+  <div id="emaitza">
+  </div>
+</div>
    </section>
    
   <?php include '../html/Footer.html' ?>
 
 </body>
 
+   <script type="text/javascript">
+    var user = "<?php echo $user; ?>";
+    galderakKontatu(user);
+    setInterval(function(){ galderakKontatu(user); }, 10000);
+  </script>
 </html>

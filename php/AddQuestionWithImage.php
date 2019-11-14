@@ -8,8 +8,8 @@
   <section class="main" id="s1">
   	<?php include 'DbConfig.php' ?>
     <?php
-    $ondo = true;
-    if(isset($_POST["submit"])){
+    header("Control-cache: no-store, no-cache, must-revalidate" );
+    //if(isset($_POST["submit"])){
     	$esteka = mysqli_connect($zerbitzaria, $erabiltzailea, $gakoa, $db) 
     		or die ("Errorea Dbra konektatzerakoan");
 
@@ -28,9 +28,7 @@
                        window.history.back(); 
 
         </script>";
-        mysqli_close($esteka);
-        $ondo = false;
-        exit();
+        exit;
       }
      
       if ((!preg_match("/^[a-z]+[0-9]{3}@ikasle\.ehu\.(eus)|(es)/", $eposta)) && (!preg_match("/^[a-z]+\.?[a-z]*@ehu\.(eus)|(es)/", $eposta))){
@@ -38,9 +36,7 @@
                        window.history.back(); 
 
         </script>";
-        mysqli_close($esteka);
-        $ondo = false;
-        exit();
+        exit;
       }
 
       if(strlen($galdera)<10){
@@ -48,9 +44,6 @@
                        window.history.back(); 
 
         </script>";
-        mysqli_close($esteka);
-        $ondo = false;
-        exit();
       }
 
   	  if (!empty($_FILES['irudia']['name']) && !empty($_FILES['irudia']['tmp_name'])){
@@ -69,6 +62,7 @@
     		echo("<br><br>");
     		echo("<button onclick=\"location.href='ShowQuestionsWithImage.php?usr=$user'\"> Ikusi galderak </button>");
         echo("<br><br>");
+        //echo '1';
     	}
     	else{
     		echo("Error description: " . mysqli_error($esteka));
@@ -79,28 +73,28 @@
 
 
     	mysqli_close($esteka);
-  }
+  //}
   	?>	
 
 
     <?php
     $xml = simplexml_load_file("../xml/Questions.xml");
 
-    $question = $xml->addChild('assessmentItem');
+    $question = $xml->addChild('assessmentitem');
     $question->addAttribute('author', $eposta);
     $question->addAttribute('subject', $gaiarloa);
-    $itemBody = $question->addChild('itemBody');
+    $itemBody = $question->addChild('itembody');
     $itemBody -> addChild('p', $galdera);
 
-    $correct = $question->addChild('correctResponse');
+    $correct = $question->addChild('correctresponse');
     $correct->addChild('value', $erantzunZuzena);
-    $incorrectResponses = $question->addChild('incorrectResponses');
+    $incorrectResponses = $question->addChild('incorrectresponses');
     $incorrectResponses->addChild('value', $erantzunOkerra1);
     $incorrectResponses->addChild('value',$erantzunOkerra2);
     $incorrectResponses->addChild('value',$erantzunOkerra3);
 
     if($xml->asXML('../xml/Questions.xml')){
-      echo "Ondo gorde dira galderak XML fitxategian.";
+      echo 1;
     }
     else{
       echo "Arazoak egon dira galderak sartzerakoan.";

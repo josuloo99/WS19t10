@@ -40,11 +40,13 @@ else {
 
 <?php
 if(isset($_GET['usr'])){
-	$erabiltzailea = $_GET['usr'];
+	$user = $_GET['usr'];
 	echo "<html>
 		<span><a href='Layout.php?usr=$user'>Hasiera</a></span>
-		<span><a href='QuestionFormWithImage.php?usr=$user'>Galderak sortu</a></span>
-		<span><a href='ShowQuestionsWithImage.php?usr=$user'>Erakutsi galderak</a></span>
+		<span><a href='QuestionFormWithImage.php?usr=$user'>Sortu galderak</a></span>
+		<span><a href='HandlingQuizesAjax.php?usr=$user'>Sortu galderak AJAX bidez</a></span>
+
+		<span><a href='ShowXmlQuestions.php?usr=$user'>Erakutsi XML galderak</a></span>
 		<span><a href='Credits.php?usr=$user'>Kredituak</a></span>
 		</html>";
 }

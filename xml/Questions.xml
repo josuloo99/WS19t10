@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="showXmlQuestions.xsl"?>
 <assessmentitems>
     <assessmentitem author="rosa.arruabarrena@ehu.eus" subject="Mikologia">
         <itembody>
@@ -89,29 +90,6 @@
             </value>
             <value>
                 Arcachon
-            </value>
-        </incorrectresponses>
-    </assessmentitem>
-    <assessmentitem author="def123@ikasle.ehu.eus" subject="Rupertxo">
-        <itembody>
-            <p>
-                Ez
-            </p>
-        </itembody>
-        <correctresponse>
-            <value>
-                da
-            </value>
-        </correctresponse>
-        <incorrectresponses>
-            <value>
-                posible
-            </value>
-            <value>
-                ezin
-            </value>
-            <value>
-                liteke
             </value>
         </incorrectresponses>
     </assessmentitem>
@@ -273,6 +251,236 @@
             </value>
             <value>
                 Gorria
+            </value>
+        </incorrectresponses>
+    </assessmentitem>
+    <assessmentitem author="ikasle001@ikasle.ehu.eus" subject="Matematika">
+        <itembody>
+            <p>
+                ((14 6)*3)/2?
+            </p>
+        </itembody>
+        <correctresponse>
+            <value>
+                30
+            </value>
+        </correctresponse>
+        <incorrectresponses>
+            <value>
+                35
+            </value>
+            <value>
+                40
+            </value>
+            <value>
+                20
+            </value>
+        </incorrectresponses>
+    </assessmentitem>
+    <assessmentitem author="ikasle001@ikasle.ehu.eus" subject="2">
+        <itembody>
+            <p>
+                Zein mendetan gaude?
+            </p>
+        </itembody>
+        <correctresponse>
+            <value>
+                XXI
+            </value>
+        </correctresponse>
+        <incorrectresponses>
+            <value>
+                XX
+            </value>
+            <value>
+                V
+            </value>
+            <value>
+                XXIV
+            </value>
+        </incorrectresponses>
+    </assessmentitem>
+    <assessmentitem author="ikasle001@ikasle.ehu.eus" subject="2">
+        <itembody>
+            <p>
+                Noiz amaitu zen lehen mundu gerra?
+            </p>
+        </itembody>
+        <correctresponse>
+            <value>
+                1918ko azaroaren 11n
+            </value>
+        </correctresponse>
+        <incorrectresponses>
+            <value>
+                1917ko otsailaren 4an
+            </value>
+            <value>
+                1943ko urtarrilaren 30ean
+            </value>
+            <value>
+                1918ko urriaren 1ean
+            </value>
+        </incorrectresponses>
+    </assessmentitem>
+    <assessmentitem author="ikasle001@ikasle.ehu.eus" subject="2">
+        <itembody>
+            <p>
+                Sodioaren sinbolo kimikoa?
+            </p>
+        </itembody>
+        <correctresponse>
+            <value>
+                Na
+            </value>
+        </correctresponse>
+        <incorrectresponses>
+            <value>
+                N
+            </value>
+            <value>
+                So
+            </value>
+            <value>
+                Sd
+            </value>
+        </incorrectresponses>
+    </assessmentitem>
+    <assessmentitem author="ikasle001@ikasle.ehu.eus" subject="2">
+        <itembody>
+            <p>
+                Hauetako zein ez dago desagertuta?
+            </p>
+        </itembody>
+        <correctresponse>
+            <value>
+                Altzea
+            </value>
+        </correctresponse>
+        <incorrectresponses>
+            <value>
+                Hungariako bisontea
+            </value>
+            <value>
+                Estepako bisontea
+            </value>
+            <value>
+                Uroa
+            </value>
+        </incorrectresponses>
+    </assessmentitem>
+    <assessmentitem author="ikasle001@ikasle.ehu.eus" subject="2">
+        <itembody>
+            <p>
+                Noiz hil zen Nelson Mandela?
+            </p>
+        </itembody>
+        <correctresponse>
+            <value>
+                2013
+            </value>
+        </correctresponse>
+        <incorrectresponses>
+            <value>
+                1985
+            </value>
+            <value>
+                2005
+            </value>
+            <value>
+                1977
+            </value>
+        </incorrectresponses>
+    </assessmentitem>
+    <assessmentitem author="ikasle002@ikasle.ehu.eus" subject="2">
+        <itembody>
+            <p>
+                Zer da balea?
+            </p>
+        </itembody>
+        <correctresponse>
+            <value>
+                Ugaztuna
+            </value>
+        </correctresponse>
+        <incorrectresponses>
+            <value>
+                Hegaztia
+            </value>
+            <value>
+                Arraina
+            </value>
+            <value>
+                Anfibioa
+            </value>
+        </incorrectresponses>
+    </assessmentitem>
+    <assessmentitem author="ikasle002@ikasle.ehu.eus" subject="2">
+        <itembody>
+            <p>
+                Zer da Izurdea?
+            </p>
+        </itembody>
+        <correctresponse>
+            <value>
+                Ugaztuna
+            </value>
+        </correctresponse>
+        <incorrectresponses>
+            <value>
+                Hegaztia
+            </value>
+            <value>
+                Arraina
+            </value>
+            <value>
+                Anfibioa
+            </value>
+        </incorrectresponses>
+    </assessmentitem>
+    <assessmentitem author="ikasle002@ikasle.ehu.eus" subject="2">
+        <itembody>
+            <p>
+                Zer da Zaldia?
+            </p>
+        </itembody>
+        <correctresponse>
+            <value>
+                Ugaztuna
+            </value>
+        </correctresponse>
+        <incorrectresponses>
+            <value>
+                Hegaztia
+            </value>
+            <value>
+                Arraina
+            </value>
+            <value>
+                Anfibioa
+            </value>
+        </incorrectresponses>
+    </assessmentitem>
+    <assessmentitem author="ikasle002@ikasle.ehu.eus" subject="2">
+        <itembody>
+            <p>
+                Zer da txantxangorria?
+            </p>
+        </itembody>
+        <correctresponse>
+            <value>
+                Txori bat
+            </value>
+        </correctresponse>
+        <incorrectresponses>
+            <value>
+                Ugaztuna
+            </value>
+            <value>
+                Arraina
+            </value>
+            <value>
+                Harraparia
             </value>
         </incorrectresponses>
     </assessmentitem>

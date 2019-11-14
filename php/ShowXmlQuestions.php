@@ -6,6 +6,11 @@
 <body>
   <?php include '../php/Menus.php' ?>
   <section class="main" id="s1">
+    <div id="taula">
+       <?php
+    $user = $_GET['usr'];
+    echo "<p>Datu baseko galderak ikusi nahi badituzu sakatu <a href='ShowQuestionsWithImage.php?usr=$user'>hemen</a></p><br>";
+    ?>
    <?php include 'DbConfig.php' ?>
    <?php
    $xml = simplexml_load_file('../xml/Questions.xml')
@@ -23,9 +28,10 @@
    	echo "<td>" . $questions->correctresponse->value."</td>";;
     echo "</tr>";
 	}
-	echo "</tabele>"
+	echo "</table>"
    ?>
-</section>
-<?php include '../html/Footer.html' ?>
+    </div>
+  </section>
+  <?php include '../html/Footer.html' ?>
 </body>
 </html>
