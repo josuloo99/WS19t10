@@ -67,3 +67,6 @@ div#taula {
     max-width: 100%;
     overflow: auto;
 }
+#epostaKonprobatu, #pasahitzaKonprobatu {
+    font: 13px Georgia, serif;
+}

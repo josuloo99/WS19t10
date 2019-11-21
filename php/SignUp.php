@@ -4,6 +4,7 @@
 <title> Erregistratu </title>
   <script src="../js/jquery-3.4.1.min.js"></script>
   <script src="../js/ShowImageInForm.js"></script>
+  <script src="../js/SignUpVerifyAjax.js"></script>
   <?php include '../html/Head.html'?>
   <style>
   form .error {
@@ -17,9 +18,10 @@
 
   <form action="" method="post" id="erregistroa" enctype = "multipart/form-data" name="erregistroa">
     <label>E-posta:</label>
-    <input type="email" name="eposta" id="eposta" pattern="([a-z]+[0-9]{3}@ikasle\.ehu\.((eus)|(es)))|([a-z]+\.?[a-z]*@ehu\.((eus)|(es)))" required>
+    <input type="email" name="eposta" id="eposta" onchange="egiaztatuEposta()" pattern="([a-z]+[0-9]{3}@ikasle\.ehu\.((eus)|(es)))|([a-z]+\.?[a-z]*@ehu\.((eus)|(es)))" required>
+    <div id="epostaKonprobatu"> </div>
     
-    <br><br>
+    <br>
 
     <label>Aukeratu erabiltzaile mota:</label>
     <input type="radio" name="erabiltzailemota" value="ikasle"> Ikaslea
@@ -32,8 +34,10 @@
     <br><br>
 
     <label>Pasahitza:</label>
-    <input type="password" name="pasahitza" required>
-    <br><br>
+    <input type="password" name="pasahitza" id="pasahitza" onchange="egiaztatuPasahitza()" required>
+    <div id="pasahitzaKonprobatu"> </div>
+
+    <br>
 
     <label>Pasahitza errepikatu:</label>
     <input type="password" name="pasahitza2" required>

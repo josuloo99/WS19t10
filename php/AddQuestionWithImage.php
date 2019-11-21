@@ -8,7 +8,7 @@
   <section class="main" id="s1">
   	<?php include 'DbConfig.php' ?>
     <?php
-    header("Control-cache: no-store, no-cache, must-revalidate" );
+    //header("Control-cache: no-store, no-cache, must-revalidate" );
     //if(isset($_POST["submit"])){
     	$esteka = mysqli_connect($zerbitzaria, $erabiltzailea, $gakoa, $db) 
     		or die ("Errorea Dbra konektatzerakoan");
