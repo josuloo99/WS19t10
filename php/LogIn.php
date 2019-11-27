@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,22 +40,43 @@
         </script>";
 	   }
 		
-		$sql = "SELECT eposta, pasahitza FROM users WHERE eposta = '$eposta' ";
+		$sql = "SELECT eposta, pasahitza, mota, state FROM users WHERE eposta = '$eposta' ";
 
 		$result = mysqli_query($esteka,$sql);
 		$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
+    if ($row['state'] == 0) {
 		if($row['eposta']==$eposta && password_verify($pasahitza, $row["pasahitza"])) {
-			echo ("<script>
+			/*echo ("<script>
           alert('Ongi etorri!');
 			    window.location.assign('Layout.php?usr=".$eposta."');
-			</script>");		
+			</script>");*/
+      $_SESSION['eposta'] = $row['eposta'];
+      $_SESSION['mota'] = $row['mota'];
+      if($_SESSION['mota'] == 'ikasle' || $_SESSION['mota'] == 'irakasle'){
+      echo ("<script>
+          alert('Ongi etorri!');
+          window.location.assign('HandlingQuizesAjax.php');
+      </script>");
+      }
+      else{
+         echo ("<script>
+          alert('Ongi etorri!');
+          window.location.assign('HandlingAccounts.php');
+      </script>");
+      }
 		}
 		else {
 			echo "<script>
             alert('Sartutako datuak ez dira egokiak');
             </script>";
 		}
+    }
+    else {
+      echo "<script>
+            alert('Kontua blokeatuta dago. Sentitzen dugu.');
+            </script>";
+    }
 
       mysqli_close($esteka);
 		}

@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,7 +63,7 @@
     	if (mysqli_query($esteka, $sql)) {
     		echo "Oso ondo! Ikusi gordeta dauden galderak";
     		echo("<br><br>");
-    		echo("<button onclick=\"location.href='ShowQuestionsWithImage.php?usr=$user'\"> Ikusi galderak </button>");
+    		echo("<button onclick=\"location.href='ShowQuestionsWithImage.php'\"> Ikusi galderak </button>");
         echo("<br><br>");
         //echo '1';
     	}
@@ -94,7 +97,7 @@
     $incorrectResponses->addChild('value',$erantzunOkerra3);
 
     if($xml->asXML('../xml/Questions.xml')){
-      echo 1;
+      echo "Ondo sartu dira galderak XMLn";
     }
     else{
       echo "Arazoak egon dira galderak sartzerakoan.";

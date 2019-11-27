@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +12,7 @@
   <div id="taula">
    <?php include 'DbConfig.php' ?>
     <?php
-	if(isset($_GET['usr'])){
+	if(isset($_SESSION['eposta']) && ($_SESSION['mota'] == 'ikasle' || $_SESSION['mota'] == 'irakasle')){
     $esteka = mysqli_connect($zerbitzaria, $erabiltzailea, $gakoa, $db) 
       or die ("Errorea Dbra konektatzerakoan");
 
@@ -48,7 +51,11 @@
       mysqli_close($esteka);
 	}
 	else {
-		echo "Kautotuta egon behar zara galderak ikusteko.";
+		echo "<script>
+                  alert('Ez zaude baimenduta hona sartzeko.');
+                  window.history.back();
+              </script>";
+    exit();
 	}
     ?>
     </div>

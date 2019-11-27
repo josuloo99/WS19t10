@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html lang="eu">
 <head>
@@ -50,7 +53,7 @@
     <img id="output_image"/>
     <br><br>
 
-    <input type="submit" name="submit" value="Bidali">
+    <input type="submit" name="submit" value="Bidali" id="bidali" disabled>
   </form>
   </section>
   <?php include '../html/Footer.html' ?>

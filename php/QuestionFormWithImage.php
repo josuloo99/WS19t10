@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,10 +15,17 @@
   <?php include '../php/Menus.php' ?>
   <section class="main" id="s1">
     <div>
-	<?php if(isset($_GET['usr'])){
-	$user = $_GET['usr'];
-	}?>
-  <form action="AddQuestionWithImage.php?usr=<?php echo $user ?>" method="post" enctype = "multipart/form-data" id="galderenF" name="galderenF" onSubmit="return egiaztatu()">
+	<?php if (isset($_SESSION['eposta']) && ($_SESSION['mota'] == 'ikasle' || $_SESSION['mota'] == 'irakasle'))
+    $user = $_SESSION['eposta'];
+      else{
+        echo "<script>
+                  alert('Ez zaude baimenduta hona sartzeko.');
+                  window.history.back();
+              </script>";
+        exit();
+      }
+  ?>
+  <form action="AddQuestionWithImage.php" method="post" enctype = "multipart/form-data" id="galderenF" name="galderenF" onSubmit="return egiaztatu()">
   <label>E-posta:</label>
   <input type="text" name="eposta" id="eposta" value="<?php echo htmlspecialchars($user); ?>"  readonly="true">
   <br><br>

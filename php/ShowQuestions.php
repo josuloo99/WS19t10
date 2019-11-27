@@ -1,3 +1,6 @@
+ <?php 
+  session_start();
+  ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +10,17 @@
   <?php include '../php/Menus.php' ?>
   <section class="main" id="s1">
    <?php include 'DbConfig.php' ?>
+    <?php include '../php/Menus.php' ?>
+  <section class="main" id="s1">
+  <div id="taula">
+  <?php if (isset($_SESSION['eposta']) && $_SESSION['mota'] == 'ikasle')
+    $user = $_SESSION['eposta'];
+      else
+        echo "<script>
+                  alert('Ez zaude baimenduta hona sartzeko.');
+                  window.history.back();
+              </script>";
+  ?>
     <?php
     $esteka = mysqli_connect($zerbitzaria, $erabiltzailea, $gakoa, $db) 
       or die ("Errorea Dbra konektatzerakoan");

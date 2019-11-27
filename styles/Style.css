@@ -59,7 +59,7 @@ table, td, th {
     word-wrap: break-word;
 }
 th, td {
-   max-width: 500px; 
+   max-width: 350px; 
 }
 
 div#taula {

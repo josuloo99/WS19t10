@@ -1,3 +1,6 @@
+<?php
+  session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,11 +8,21 @@
 </head>
 <body>
   <?php include '../php/Menus.php' ?>
+  <?php if (isset($_SESSION['eposta']) && ($_SESSION['mota'] == 'ikasle' || $_SESSION['mota'] == 'irakasle'))
+          $user = $_SESSION['eposta'];
+        else{
+          echo "<script>
+                    alert('Ez zaude baimenduta hona sartzeko.');
+                    window.history.back();
+                </script>";
+          exit();
+        }
+  ?>
   <section class="main" id="s1">
     <div id="taula">
        <?php
-    $user = $_GET['usr'];
-    echo "<p>Datu baseko galderak ikusi nahi badituzu sakatu <a href='ShowQuestionsWithImage.php?usr=$user'>hemen</a></p><br>";
+    $user = $_SESSION['eposta'];
+    echo "<p>Datu baseko galderak ikusi nahi badituzu sakatu <a href='ShowQuestionsWithImage.php'>hemen</a></p><br>";
     ?>
    <?php include 'DbConfig.php' ?>
    <?php
