@@ -9,8 +9,9 @@ xhro.onreadystatechange = function() {
 }
 
 function galderaGehitu(form) {
+	console.log($('#irudia')[0]);
 	var data = new FormData();
-	data.append("irudia", form[10].files[0]);
+	data.append('irudia',$('#irudia')[0].files[0]);
 
 	if(form[6].checked == true)
 		var zail = 1;
@@ -19,6 +20,20 @@ function galderaGehitu(form) {
 	else if(form[8].checked == true)
 		var zail = 3;
 
+
+	// $.ajax {
+	// 	type: "POST",
+ //        url: "../php/AddQuestionWithImage.php",
+ //        data: form,
+ //        cache: false,
+ //        error: function(e) {
+ //            console.log("XML irakurketak akatsa izan du: ", e);
+ //        },
+ //        success: function(response) {
+            
+ //        }
+
+	// }
 
 	xhro.open("POST","../php/AddQuestionWithImage.php", true);
 	xhro.setRequestHeader("Content-type","application/x-www-form-urlencoded");

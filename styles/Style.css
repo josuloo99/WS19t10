@@ -62,11 +62,14 @@ th, td {
    max-width: 350px; 
 }
 
-div#taula {
+div #taula {
     max-height: 100%;
     max-width: 100%;
     overflow: auto;
 }
 #epostaKonprobatu, #pasahitzaKonprobatu {
     font: 13px Georgia, serif;
+}
+.erantzun{
+    min-width: 250px;
 }

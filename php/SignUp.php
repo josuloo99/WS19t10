@@ -63,6 +63,17 @@
 
 <?php include 'DbConfig.php' ?>
 <?php
+  function generateRandomString($length = 10) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+        return $randomString;
+  }
+?>
+<?php
   if(isset($_POST['submit'])){
     $esteka = mysqli_connect($zerbitzaria, $erabiltzailea, $gakoa, $db) 
       or die ("Errorea Dbra konektatzerakoan");
@@ -98,16 +109,20 @@
         exit();
     }
 
-    $pasahitza = password_hash($pasahitza1, PASSWORD_DEFAULT); 
+    $pasahitza = password_hash($pasahitza1, PASSWORD_DEFAULT);
+    $recovery =  generateRandomString();
 
     if (!empty($_FILES['irudia']['name']) && !empty($_FILES['irudia']['tmp_name'])) {
       $irudia = $_FILES['irudia']['tmp_name'];
       $izena = $_FILES['irudia']['name'];
       $irudia = addslashes(file_get_contents($_FILES['irudia']['tmp_name']));
-      $sql = "INSERT INTO users VALUES ('$eposta', '$erabiltzailemota', '$izenabizen', '$pasahitza', '$irudia')";
+    }
+
+    if(!empty($irudia)) {
+      $sql = "INSERT INTO users VALUES ('$eposta', '$erabiltzailemota', '$izenabizen', '$pasahitza', '0', '$irudia', '$recovery')";
     }
     else {
-      $sql = "INSERT INTO users (eposta, mota, izena, pasahitza) VALUES ('$eposta', '$erabiltzailemota', '$izenabizen', '$pasahitza')";
+      $sql = "INSERT INTO users (eposta, mota, izena, pasahitza, recovery) VALUES ('$eposta', '$erabiltzailemota', '$izenabizen', '$pasahitza', '$recovery')";
     }
 
     if (mysqli_query($esteka, $sql)) {
@@ -118,8 +133,8 @@
     }
     else{
       echo("Error description: " . mysqli_error($esteka));
-      echo("<br><br>");
-      echo("<button onclick=\"location.href='QuestionFormWithImage.php'\"> Saiatu berriro </button>");
+      //echo("<br><br>");
+      //echo("<button onclick=\"location.href='QuestionFormWithImage.php'\"> Saiatu berriro </button>");
     }
     mysqli_close($esteka);
   }

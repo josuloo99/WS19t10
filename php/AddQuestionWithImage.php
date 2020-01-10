@@ -24,6 +24,10 @@
     	$erantzunOkerra3 = $_POST['erantzunOkerra3'];
     	$zailtasuna = $_POST['zailtasuna'];
     	$gaiarloa = $_POST['gaiarloa'];
+      $irudia = $_POST['irudia'];
+
+
+
 
 
       if(empty($eposta) || empty($galdera) || empty($erantzunZuzena) || empty($erantzunOkerra1) || empty($erantzunOkerra2) || empty($erantzunOkerra3) || empty($gaiarloa)){
@@ -52,10 +56,12 @@
   	  if (!empty($_FILES['irudia']['name']) && !empty($_FILES['irudia']['tmp_name'])){
     		$irudia = $_FILES['irudia']['tmp_name'];
     		$izena = $_FILES['irudia']['name'];
-    		$irudia = addslashes(file_get_contents($_FILES['irudia']['tmp_name']));
-    		
+    		$irudia = addslashes(file_get_contents($_FILES['irudia']['tmp_name'])); 
+    	}	
+
+      if(!empty($irudia)) {
     		$sql = "INSERT INTO questions VALUES ('$eposta', '$galdera', '$erantzunZuzena', '$erantzunOkerra1', '$erantzunOkerra2', '$erantzunOkerra3', '$zailtasuna', '$gaiarloa', '$irudia')";
-    	}
+      }
     	else {
     		$sql = "INSERT INTO questions (eposta, galdera, erantzunZuzena, erantzunOkerra1, erantzunOkerra2, erantzunOkerra3, zailtasuna, gaiarloa) VALUES ('$eposta', '$galdera', '$erantzunZuzena', '$erantzunOkerra1', '$erantzunOkerra2', '$erantzunOkerra3', '$zailtasuna', '$gaiarloa')";
     	}

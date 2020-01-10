@@ -2,7 +2,7 @@
 require_once('../lib/nusoap.php');
 require_once('../lib/class.wsdlcache.php');
 
-$ns = "https://wsloidimannion10.000webhostapp.com/pWS19/webZerbitzuak/verifyPassWS.php?wsdl";
+$ns = "http://localhost/pWS19Loidi_Mannion/webZerbitzuak/verifyPassWS.php?wsdl";
 $server = new soap_server;
 $server->configureWSDL('pasahitzaEgiaztatu', $ns);
 $server->wsdl->schemaTargetNamespace=$ns;

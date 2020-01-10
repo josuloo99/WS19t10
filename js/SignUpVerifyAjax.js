@@ -56,3 +56,24 @@ function egiaztatuPasahitza() {
         }
     });
 }
+
+function egiaztatuPasahitzaR() {
+    $.ajax({
+        type: "POST",
+        url: "../php/ClientVerifyPass.php",
+        data: "pasahitza=" + $('#pasahitza').val(),
+        cache: false,
+        error: function(e) {
+            console.log("XML irakurketak akatsa izan du: ", e);
+        },
+        success: function(response) {
+            if (response == 'BALIOGABE') {
+                $('#pasahitzaKonprobatu').text('Pasahitza baliogabea da');
+                document.getElementById("bidali").disabled = true;
+            } else if (response == 'BALIOZKO') {
+                $('#pasahitzaKonprobatu').text('Ongi. Pasahitz egokia.');
+                $("#bidali").removeAttr("disabled");
+            }
+        }
+    });
+}
